@@ -30,6 +30,9 @@ intellij {
     version.set(properties("platformVersion"))
     type.set(properties("platformType"))
 
+    //插件生成目录，必须配置
+    sandboxDir.set("idea-sandbox")
+
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
 }
